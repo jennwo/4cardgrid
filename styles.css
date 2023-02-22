@@ -35,7 +35,7 @@ color: hsl(228, 45%, 44%);
 
 /* GRID STYLES */
 .container{
-    max-width: 375px;
+    width: 375px;
     margin: auto;
     display: grid;
     grid-template-columns: 1fr;
@@ -45,6 +45,7 @@ color: hsl(228, 45%, 44%);
 /* HEADER STYLES */
 header{
     text-align: center;
+    font-size: 1em;
 }
 .heading1{
     font-weight: 200;
@@ -69,7 +70,7 @@ strong.boldHeading{
     padding-left: 2em;
     padding-top: 1em;
     margin-bottom: 1.5em;
-    box-shadow: 0 8px 8px -4px var(--grayishBlue);
+    box-shadow: 0 8px 8px -4px hsl(233, 11%, 72%);
 }
 
 .cardHead{
@@ -105,9 +106,55 @@ strong.boldHeading{
     margin-right: 2em;
     margin-top: 1em;
 }
+/* MEDIUM SCREENS */
+@media (min-width: 770px) and (max-width:1199px){
+    .container{
+        max-width: 1300px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 1fr 3fr;
+        grid-template-areas: 
+        "head head head"
+        "main main main";
+        /* margin-top: 2vh; */
+        height: 100vh;
+    }
+    /* HEADER STYLES */
+    header{
+        grid-area: head;
+    }
+
+    /* MAIN STYLES */
+    main{
+        grid-area: main;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas: 
+        "sup    team"
+        "karma  calc";
+        row-gap: 1em;
+        column-gap: 1em;
+    }
+
+    /* CARD STYLES */
+    #supervisor{
+        grid-area: sup;
+    }
+    #teamBuilder{
+        grid-area: team;
+    }
+    #karma{
+        grid-area: karma;
+    }
+    #calculator{
+        grid-area: calc;
+    }
+}
 
 /* LARGER SCREEN STYLES */
-@media (min-width: 550px){
+
+@media (min-width: 1200px){
     .container{
         max-width: 1300px;
         display: grid;
@@ -121,13 +168,16 @@ strong.boldHeading{
     }
     /* HEADING STYLES */
     header{
+        font-size: 1em;
         grid-area: head;
+        width:max-content;
     }
     .heading1{
-        font-size: 3em;
+        font-size: 2.5em;
     }
     .headingText{
         margin-top: -.5em;
+        font-size: 1em;
     }
     .lineBreak{
         display: block;
@@ -140,12 +190,13 @@ strong.boldHeading{
         grid-template-rows: repeat(3, 1fr);
         grid-template-columns:repeat(3, 1fr);
         column-gap: 1em;
+        row-gap: .5em;
         grid-template-areas:
         "super  team   calc"
         "super  karma  calc"
         "foot   foot   foot";
         height: 510px;   
-        margin-top: -2em;
+        margin-top: -4em;
     }
 /* CARD STYLES */
     #supervisor{
