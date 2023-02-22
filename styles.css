@@ -116,26 +116,41 @@ strong.boldHeading{
         grid-template-areas: 
         "head head head"
         "main main main";
-        margin-top: 5vh;
+        /* margin-top: 2vh; */
+        height: 100vh;
     }
+    /* HEADING STYLES */
     header{
         grid-area: head;
+        border: 1px solid orange;
+    }
+    .heading1{
+        font-size: 3em;
+    }
+    .headingText{
+        border: 1px solid purple;
+        margin-top: -.5em;
     }
     .lineBreak{
         display: block;
     }
 
+/* MAIN STYLES */
     main{
         grid-area: main;
         display: grid;
-        grid-template-rows: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 1fr);
         grid-template-columns:repeat(3, 1fr);
         column-gap: 1em;
         grid-template-areas:
         "super  team   calc"
-        "super  karma  calc";
+        "super  karma  calc"
+        "foot   foot   foot";
+        border:1px solid blue;
+        height: 510px;   
+        margin-top: -2em;
     }
-
+/* CARD STYLES */
     #supervisor{
         grid-area: super;
         margin-top: 10em;
@@ -149,6 +164,13 @@ strong.boldHeading{
     #calculator{
         grid-area: calc;
         margin-top: 10em;
-        /* margin-left: 1em; */
     }
+
+/* FOOTER STYLES */
+footer{
+    grid-area: foot;
+    margin-top: -3vh;
+    border: 1px solid purple;
+}
+
 }
