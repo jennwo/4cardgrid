@@ -122,13 +122,11 @@ strong.boldHeading{
     /* HEADING STYLES */
     header{
         grid-area: head;
-        border: 1px solid orange;
     }
     .heading1{
         font-size: 3em;
     }
     .headingText{
-        border: 1px solid purple;
         margin-top: -.5em;
     }
     .lineBreak{
@@ -146,7 +144,6 @@ strong.boldHeading{
         "super  team   calc"
         "super  karma  calc"
         "foot   foot   foot";
-        border:1px solid blue;
         height: 510px;   
         margin-top: -2em;
     }
@@ -170,7 +167,6 @@ strong.boldHeading{
 footer{
     grid-area: foot;
     margin-top: -3vh;
-    border: 1px solid purple;
 }
 
 }
