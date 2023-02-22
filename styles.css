@@ -57,7 +57,6 @@ strong.boldHeading{
 
 .headingText{
     color: var(--grayishBlue);
-    /* border: 1px solid purple; */
     font-size: 1.2em;
 }
 
@@ -75,7 +74,6 @@ strong.boldHeading{
 
 .cardHead{
     font-weight: 600;
-    /* border: 1px solid orange; */
     margin-bottom: -.5em;
     color: var(--vDarkBlue);
     margin-top: -.1em;
@@ -84,7 +82,6 @@ strong.boldHeading{
 
 .cardText{
     color: var(--grayishBlue);
-    /* border: 1px solid yellow; */
     margin-bottom: 1em;
 }
 
@@ -119,12 +116,12 @@ strong.boldHeading{
         /* margin-top: 2vh; */
         height: 100vh;
     }
-    /* HEADER STYLES */
+    /* HEADER STYLES-- MED SCREEN */
     header{
         grid-area: head;
     }
 
-    /* MAIN STYLES */
+    /* MAIN STYLES-- MED SCREEN */
     main{
         grid-area: main;
         display: grid;
@@ -137,7 +134,7 @@ strong.boldHeading{
         column-gap: 1em;
     }
 
-    /* CARD STYLES */
+    /* CARD STYLES-- MED SCREEN */
     #supervisor{
         grid-area: sup;
     }
@@ -166,7 +163,7 @@ strong.boldHeading{
         height: 100vh;
         
     }
-    /* HEADING STYLES */
+    /* HEADING STYLES-- LRG SCREEN */
     header{
         font-size: 1em;
         grid-area: head;
@@ -176,6 +173,7 @@ strong.boldHeading{
     .heading1{
         font-size: 2.5em;
         font-weight: 200;
+        line-height: 1.2em;
     }
     .headingText{
         margin-top: -.5em;
@@ -185,7 +183,7 @@ strong.boldHeading{
         display: block;
     }
 
-/* MAIN STYLES */
+/* MAIN STYLES-- LRG SCREEN */
     main{
         grid-area: main;
         display: grid;
@@ -200,7 +198,10 @@ strong.boldHeading{
         height: 510px;   
         margin-top: -4em;
     }
-/* CARD STYLES */
+/* CARD STYLES-- LRG SCREEN */
+    .cardHead{
+        font-weight: 600;
+    }
     #supervisor{
         grid-area: super;
         margin-top: 10em;
@@ -216,7 +217,7 @@ strong.boldHeading{
         margin-top: 10em;
     }
 
-/* FOOTER STYLES */
+/* FOOTER STYLES-- LRG SCREEN */
 footer{
     grid-area: foot;
     margin-top: -3vh;
