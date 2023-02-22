@@ -1,0 +1,154 @@
+hmtl{
+    box-sizing: border-box;
+}
+
+*, *:before, *:after{
+    box-sizing: inherit;
+}
+
+/*COLORS */
+:root{
+    /* PRIMARY COLORS */
+    --red: hsl(0, 78%, 62%);
+    --cyan: hsl(180, 62%, 55%);
+    --orange: hsl(34, 97%, 64%);
+    --blue: hsl(212, 86%, 64%);
+
+    /* NEUTRAL COLORS */
+    --vDarkBlue: hsl(234, 12%, 34%);
+    --grayishBlue: hsl(229, 6%, 66%);
+    --vLightGray: hsl(0, 0%, 98%);
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+    background-color: var(--vLightGray);
+}
+
+.attribution {
+font-size: 11px; text-align: center;
+}
+.attribution a {
+color: hsl(228, 45%, 44%); 
+}
+
+/* GRID STYLES */
+.container{
+    max-width: 375px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    place-items: center;
+}
+
+/* HEADER STYLES */
+header{
+    text-align: center;
+}
+.heading1{
+    font-weight: 200;
+}
+strong.boldHeading{
+    font-weight: 600;
+    color: var(--vDarkBlue);
+}
+
+.headingText{
+    color: var(--grayishBlue);
+    /* border: 1px solid purple; */
+    font-size: 1.2em;
+}
+
+/* CARD STYLES */
+.card{
+    background-color: white;
+    height: 220px;
+    width: 330px;
+    border-radius: 10px;
+    padding-left: 2em;
+    padding-top: 1em;
+    margin-bottom: 1.5em;
+    box-shadow: 0 8px 8px -4px var(--grayishBlue);
+}
+
+.cardHead{
+    font-weight: 600;
+    /* border: 1px solid orange; */
+    margin-bottom: -.5em;
+    color: var(--vDarkBlue);
+    margin-top: -.1em;
+    padding-top: .5em;
+}
+
+.cardText{
+    color: var(--grayishBlue);
+    /* border: 1px solid yellow; */
+    margin-bottom: 1em;
+}
+
+#supervisor{
+    border-top: 5px solid var(--cyan);
+}
+#teamBuilder{
+    border-top: 5px solid var(--red);
+}
+#karma{
+    border-top: 5px solid var(--orange);
+}
+#calculator{
+    border-top: 5px solid var(--blue);
+}
+
+.cardPic{
+    float:right;
+    margin-right: 2em;
+    margin-top: 1em;
+}
+
+/* LARGER SCREEN STYLES */
+@media (min-width: 550px){
+    .container{
+        max-width: 1300px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 1fr 3fr;
+        grid-template-areas: 
+        "head head head"
+        "main main main";
+        margin-top: 5vh;
+    }
+    header{
+        grid-area: head;
+    }
+    .lineBreak{
+        display: block;
+    }
+
+    main{
+        grid-area: main;
+        display: grid;
+        grid-template-rows: repeat(2, 1fr);
+        grid-template-columns:repeat(3, 1fr);
+        column-gap: 1em;
+        grid-template-areas:
+        "super  team   calc"
+        "super  karma  calc";
+    }
+
+    #supervisor{
+        grid-area: super;
+        margin-top: 10em;
+    }
+    #team{
+        grid-area: team;
+    }
+    #karma{
+        grid-area: karma;
+    }
+    #calculator{
+        grid-area: calc;
+        margin-top: 10em;
+        /* margin-left: 1em; */
+    }
+}
