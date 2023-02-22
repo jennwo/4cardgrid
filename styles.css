@@ -171,10 +171,11 @@ strong.boldHeading{
         font-size: 1em;
         grid-area: head;
         width:max-content;
-        margin-top: 2.5em;
+        margin-top: 3em;
     }
     .heading1{
         font-size: 2.5em;
+        font-weight: 200;
     }
     .headingText{
         margin-top: -.5em;
